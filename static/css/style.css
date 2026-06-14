@@ -1,0 +1,144 @@
+/* ============================
+   General Page Styling
+============================ */
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* ============================
+   Navbar
+============================ */
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* ============================
+   Login Form Box
+============================ */
+
+.login-box {
+    max-width: 400px;
+    margin: 70px auto;
+    padding: 25px 30px;
+
+    background-color: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Login Title */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+/* Input Fields */
+.login-box input {
+    width: 100%;
+    padding: 10px 12px;
+
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+
+    margin-bottom: 15px;
+}
+
+
+/* Input Focus */
+.login-box input:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 3px rgba(13, 110, 253, 0.5);
+}
+
+
+/* Login Button */
+.login-box button {
+    width: 100%;
+    padding: 10px;
+
+    background-color: #0d6efd;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Button Hover */
+.login-box button:hover {
+    background-color: #0b5ed7;
+}
+
+
+/* ============================
+   Tables (Dashboard)
+============================ */
+
+.table {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #250fcf;
+    color: white;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* ============================
+   Forms (Create / Update)
+============================ */
+
+.form-box {
+    max-width: 700px;
+    margin: 30px auto;
+
+    background: white;
+    padding: 25px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+
+/* ============================
+   Footer
+============================ */
+
+footer {
+    background-color: #127feb;
+    color: white;
+    text-align: center;
+
+    padding: 15px;
+    margin-top: 50px;
+}

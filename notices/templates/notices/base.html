@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Notice Tracker</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="{% url 'dashboard' %}">
+                                                        Notice Tracker
+            </a>
+
+            <div>
+
+                {% if user.is_authenticated %}
+
+                    <span class="text-light me-3">
+                        {{ user.username }}
+                    </span>
+
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-light">
+                            Logout
+                        </button>
+                    </form>
+
+                {% else %}
+
+                    <a href="{% url 'login' %}" class="btn btn-outline-light">
+                        Login
+                    </a>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+<main class="container col-lg-9 col-md-10 col-12 mt-4">
+
+    <section>
+
+        <article>
+
+            {% block content %}
+            {% endblock %}
+
+        </article>
+
+    </section>
+
+</main>
+
+
+
+
+</body>
+</html>

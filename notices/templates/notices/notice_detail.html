@@ -1,0 +1,12 @@
+{% extends 'notices/base.html' %}
+{% block content %}
+<h2>{{ notice.title }}</h2>
+<p><strong>Category:</strong> {{ notice.category }}</p>
+<p><strong>Created By:</strong> {{ notice.created_by.username }}</p>
+<p><strong>Date:</strong> {{ notice.created_at }}</p>
+<p>{{ notice.content }}</p>
+{% if notice.attachment %}
+<p><a href="{{ notice.attachment.url }}" target="_blank">Download Attachment</a></p>
+{% endif %}
+<a class="btn btn-primary" href="{% url 'dashboard' %}">Back to Dashboard</a>
+{% endblock %}

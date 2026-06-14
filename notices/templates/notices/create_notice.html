@@ -1,0 +1,48 @@
+{% extends 'notices/base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+
+        <div class="card shadow p-4">
+            <h3 class="mb-4 text-center">Create Notice</h3>
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <!-- Title -->
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    {{ form.title }}
+                </div>
+
+                <!-- Content -->
+                <div class="mb-3">
+                    <label class="form-label">Content</label>
+                    {{ form.content }}
+                </div>
+
+                <!-- Category -->
+                <div class="mb-3">
+                    <label class="form-label">Category</label>
+                    {{ form.category }}
+                </div>
+
+                <!-- Attachment -->
+                <div class="mb-3">
+                    <label class="form-label">Attachment</label>
+                    {{ form.attachment }}
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success px-4">Save</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
